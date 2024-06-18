@@ -20,7 +20,7 @@ public class StudentController {
     @PostMapping("/add")
     public String addStudent(@RequestBody Student student){
         studentService.saveStudent(student);
-        return student.getName() + " was added!";
+        return student.getName() + " was added";
     }
     @GetMapping("/getAll")
     public List<Student> getAllStudents(){
@@ -48,7 +48,7 @@ public class StudentController {
     @DeleteMapping("/{id}")
     public String delete(@PathVariable Integer id){
         studentService.deleteStudent(id);
-        return "Student with id: " + id + " was deleted!";
+        return "Student with id: " + id + " was deleted";
     }
 
 }
